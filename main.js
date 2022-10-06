@@ -44,3 +44,13 @@ const resetSearch = () => {
     search.value = suggestions.innerHTML = "";
     search.focus();
 }
+
+search.addEventListener("input", autoComplete);
+
+search.addEventListener("blur", () => {
+    suggestions.style.display = "none";
+})
+
+search.addEventListener("focus", () => {
+    suggestions.style.display = "block";
+})
