@@ -218,3 +218,14 @@ ul {
         padding: 5px 0;
     }
 }
+
+@media only screen and (max-width: 499px) {
+    .navbar_link{
+        font-size: 15px;
+        padding: .5rem .7rem;
+    }
+
+    footer{
+        font-size: 15px;
+    }
+}
