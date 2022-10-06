@@ -56,10 +56,12 @@
             <div class="search wrapper">
                 <div class="search_wrapper">
                     <h2 class="search_title">phpSearch</h2>
-                    <form action="">
+
+                    <form class="search_form" action="" autocomplete="off">
                         <div class="search_group">
-                            <input type="text" name="search" id="search" class="search_input" />
-                            <div class="close_icon">
+                            <input type="text" name="search" id="search" class="search_input"
+                                oninput="autoComplete(event)" />
+                            <div class="close_icon" onclick="resetSearch()">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -73,7 +75,9 @@
                                 </svg>
                             </div>
                         </div>
+                        <ul class="suggestions"></ul>
                     </form>
+
                     <p class="search_description">Lorem ipsum, dolor sit amet</p>
                 </div>
             </div>
@@ -107,6 +111,7 @@
 
     <!--===== Main Script =====-->
     <script src="main.js"></script>
+    <script src="data.js"></script>
 </body>
 
 </html>
