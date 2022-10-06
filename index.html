@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phpSearch</title>
+
+    <!--===== Styles =====-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <!--====== Header =====-->
+        <header class="navbar_header">
+            <nav class="navbar_nav wrapper">
+                <ul class="navbar_menu">
+                    <li class="navbar_list">
+                        <a class="navbar_link active" href="#">Web</a>
+                    </li>
+                    <li class="navbar_list">
+                        <a class="navbar_link" href="#">Images</a>
+                    </li>
+                    <li class="navbar_list">
+                        <a class="navbar_link" href="#">Videos</a>
+                    </li>
+                    <li class="navbar_list">
+                        <a class="navbar_link" href="#">News</a>
+                    </li>
+                </ul>
+
+                <div class="navbar_sidebar_wrapper">
+                    <div class="navbar_bars" onclick="toggleSidebar(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </div>
+
+                    <div class="sidebar_overlay" onclick="closeSidebar(this, document.querySelector('.navbar_bars'))">
+                    </div>
+
+                    <!--===== Our Sidebar =====-->
+                    <div class="navbar_sidebar">
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--===== Main Content =====-->
+        <main>
+            <div class="search wrapper">
+                <div class="search_wrapper">
+                    <h2 class="search_title">phpSearch</h2>
+                    <form action="">
+                        <div class="search_group">
+                            <input type="text" name="search" id="search" class="search_input" />
+                            <div class="close_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                            <div class="search_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="search_description">Lorem ipsum, dolor sit amet</p>
+                </div>
+            </div>
+        </main>
+
+        <!--===== Footer =====-->
+        <footer class="footer">
+            <div class="wrapper footer_wrapper">
+                <ul class="footer_menu">
+                    <li class="footer_list">
+                        <a class="footer_link" href="#">Contact</a>
+                    </li>
+                    <li class="footer_list">
+                        <a class="footer_link" href="#">About</a>
+                    </li>
+                    <li class="footer_list">
+                        <a class="footer_link" href="#">Admin</a>
+                    </li>
+                </ul>
+                <ul class="footer_menu">
+                    <li class="footer_list">
+                        Powered by phpSearch
+                    </li>
+                    <li class="footer_list">
+                        &copy; 2019 phpSearch
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!--===== Main Script =====-->
+    <script src="main.js"></script>
+</body>
+
+</html>
