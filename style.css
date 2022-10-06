@@ -48,6 +48,8 @@ ul {
 .navbar_header {
     background-color: var(--bg-secondary);
     height: var(--header-height);
+    position: relative;
+    z-index: 1;
 }
 
 .navbar_nav {
@@ -122,6 +124,8 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    position: relative;
 }
 
 .search_title {
@@ -188,6 +192,14 @@ ul {
     color: var(--text-gray);
 }
 
+.search_ovelay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .suggestions {
     box-shadow: 2px 2px 16px rgba(0 0 0 / 12%);
     width: 350px;
@@ -200,6 +212,7 @@ ul {
 
 .suggestions li {
     padding: .5rem;
+    cursor: pointer;
 }
 
 .suggestions li:hover {
@@ -213,6 +226,8 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .footer_wrapper {

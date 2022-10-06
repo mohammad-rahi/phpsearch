@@ -1,5 +1,8 @@
 const search = document.querySelector('#search');
 const suggestions = document.querySelector(".suggestions");
+const searchOverlay = document.querySelector(".search_ovelay");
+// const header = document.querySelector(".navbar_header");
+// const footer = document.querySelector(".footer");
 
 const toggleSidebar = (thisElement) => {
     let sidebar = document.querySelector(".navbar_sidebar");
@@ -45,12 +48,15 @@ const resetSearch = () => {
     search.focus();
 }
 
-search.addEventListener("input", autoComplete);
-
-search.addEventListener("blur", () => {
-    suggestions.style.display = "none";
-})
-
-search.addEventListener("focus", () => {
+const suggestionsBLock = () => {
     suggestions.style.display = "block";
-})
+}
+
+searchOverlay.addEventListener("click", () => {
+    suggestions.style.display = "none";
+});
+
+search.addEventListener("input", autoComplete);
+search.addEventListener("focus", suggestionsBLock);
+// header.addEventListener("click", suggestionsBLock);
+// footer.addEventListener("click", suggestionsBLock);
