@@ -1,0 +1,283 @@
+:root {
+    --brave-color: #ff2101;
+}
+
+.search_header_wrapper {
+    width: 100vw;
+    max-width: 1580px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f2f4f7;
+}
+
+.search_header {
+    background-color: #f9fafd;
+    border-bottom: 1px solid #efdfdf;
+}
+
+/*===== Header Top =====*/
+.header_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem .5rem;
+}
+
+.header_top_left {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.search_header_logo {
+    width: 114px;
+    height: 35px;
+    background: url('../images/brave.svg') no-repeat center/cover;
+}
+
+.search_form {
+    position: relative;
+    z-index: 1;
+}
+
+.search_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.search_group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 650px;
+    min-height: 45px;
+    background-color: #fff;
+}
+
+.search_group:hover,
+.search_group:focus-within {
+    box-shadow: 2px 2px 32px rgba(0 0 0 / 12%);
+}
+
+.search_input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 5px;
+    padding-left: 1rem;
+    font-size: 16px;
+    color: #555;
+}
+
+.search_input::placeholder {
+    color: #aaa;
+}
+
+.search_input:focus {
+    outline: none;
+}
+
+.search_icon,
+.close_icon,
+.sidebar_close_icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.search_icon {
+    color: var(--brave-color);
+}
+
+.close_icon {
+    color: #ccc;
+    display: none;
+}
+
+.close_icon:hover {
+    color: #bbb;
+}
+
+.search_ovelay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.suggestions {
+    border-radius: 0 0 10px 10px;
+    width: 650px;
+    max-height: 400px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: var(--bg-primary);
+    overflow-y: auto;
+}
+
+.suggestions::-webkit-scrollbar {
+    display: none;
+}
+
+.suggestions li {
+    padding: .5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.suggestions li:hover {
+    background-color: var(--bg-secondary);
+}
+
+.search_icon_left {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.list_search_icon {
+    width: 20px;
+    height: 20px;
+}
+
+/*===== Header Bottom =====*/
+.header_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 650px;
+    font-size: 14px;
+    margin-left: 10.5rem;
+    position: relative;
+}
+
+.header_bottom svg {
+    width: 20px;
+}
+
+.header_bottom_menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header_bottom_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    padding: .5rem 0;
+    border-bottom: 3px solid transparent;
+}
+
+.header_bottom_link.active,
+.header_bottom_link:hover {
+    color: var(--brave-color);
+    border-color: var(--brave-color);
+}
+
+.header_bottom_right_icon {
+    display: flex;
+}
+
+.settings_icon,
+.info_icon,
+.feedback_icon {
+    width: 30px;
+    height: 30px;
+    color: #555;
+    border-radius: 30px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 150ms ease-out;
+}
+
+.settings_icon:hover,
+.info_icon:hover,
+.feedback_icon:hover {
+    background-color: #efefef;
+}
+
+@media only screen and (max-width: 1290px) {
+    .search_header_logo {
+        width: 30px;
+        height: 35px;
+        background: url('../images/brave-logo-small.svg') no-repeat center/cover;
+    }
+
+    .header_bottom {
+        margin-left: 5.5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .search_header_wrapper {
+        width: 95vw;
+    }
+
+    .header_top {
+        padding: .5rem;
+    }
+
+    .header_top_left {
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .settings_icon {
+        display: none;
+    }
+
+    .search_header_logo {
+        width: 114px;
+        height: 35px;
+        background: url('../images/brave.svg') no-repeat center/cover;
+    }
+
+    .search_group,
+    .header_bottom,
+    .suggestions {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (max-width: 499px) {
+
+    .search_group input,
+    .suggestions {
+        font-size: 15px;
+    }
+
+    .header_bottom_menu {
+        font-size: 12px;
+        gap: 1rem;
+    }
+
+    .header_bottom svg {
+        width: 1rem;
+    }
+}

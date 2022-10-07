@@ -20,8 +20,6 @@ const closeSidebar = (thisElement, bars) => {
     document.querySelector("#container").classList.remove("open");
     document.querySelector(".search").classList.remove("open");
     document.querySelector(".sidebar_overlay").classList.remove("open");
-
-    bars.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>'
 };
 
 const autoComplete = (event) => {
@@ -38,16 +36,41 @@ const autoComplete = (event) => {
         }).join("");
 
         suggestions.innerHTML = list;
-        suggestions.style.maxHeight = "350px";
+
+        search.style.paddingLeft = "5px";
+        document.querySelector(".search_icon_left").style.display = "block";
+        document.querySelector(".search_overlay").style.display = "block";
+        document.querySelector(".close_icon").style.display = "block";
+        document.querySelector(".search_group").style.borderRadius = "10px 10px 0 0";
+        suggestions.style.borderTop = "1px solid #efdfdf";
     }
     else {
         suggestions.innerHTML = ""
+        search.style.paddingLeft = "1rem";
+        document.querySelector(".search_icon_left").style.display = "none";
+        document.querySelector(".search_overlay").style.display = "none";
+        document.querySelector(".close_icon").style.display = "none";
+        document.querySelector(".search_group").style.borderRadius = "10px";
+        suggestions.style.borderTop = "none";
     }
 }
 
 const resetSearch = () => {
     search.value = suggestions.innerHTML = "";
     search.focus();
+
+    search.style.paddingLeft = "1rem";
+    document.querySelector(".search_icon_left").style.display = "none";
+    document.querySelector(".search_group").style.borderRadius = "10px";
+    suggestions.style.borderTop = "none";
+}
+
+const searchOverlayHandler = () => {
+    search.style.paddingLeft = "1rem";
+    document.querySelector(".search_icon_left").style.display = "none";
+    document.querySelector(".search_overlay").style.display = "none";
+    document.querySelector(".search_group").style.borderRadius = "10px";
+    suggestions.style.display = 'none'
 }
 
 const suggestionsBLock = () => {
