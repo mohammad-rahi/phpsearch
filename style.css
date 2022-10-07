@@ -126,6 +126,8 @@ ul {
     align-items: center;
     z-index: 1;
     position: relative;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .search_title {
