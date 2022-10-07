@@ -16,46 +16,51 @@
 </head>
 
 <body>
-    <div id="container">
-        <!--====== Header =====-->
-        <header class="navbar_header">
-            <nav class="navbar_nav wrapper">
-                <ul class="navbar_menu">
-                    <li class="navbar_list">
-                        <a class="navbar_link active" href="#">Web</a>
-                    </li>
-                    <li class="navbar_list">
-                        <a class="navbar_link" href="#">Images</a>
-                    </li>
-                    <li class="navbar_list">
-                        <a class="navbar_link" href="#">Videos</a>
-                    </li>
-                    <li class="navbar_list">
-                        <a class="navbar_link" href="#">News</a>
-                    </li>
-                </ul>
+    <!--====== Header =====-->
+    <header class="navbar_header">
+        <nav class="navbar_nav wrapper">
+            <ul class="navbar_menu">
+                <li class="navbar_list">
+                    <a class="navbar_link active" href="#">Web</a>
+                </li>
+                <li class="navbar_list">
+                    <a class="navbar_link" href="#">Images</a>
+                </li>
+                <li class="navbar_list">
+                    <a class="navbar_link" href="#">Videos</a>
+                </li>
+                <li class="navbar_list">
+                    <a class="navbar_link" href="#">News</a>
+                </li>
+            </ul>
 
-                <div class="navbar_sidebar_wrapper">
-                    <div class="navbar_bars" onclick="toggleSidebar(this)">
+            <div class="navbar_sidebar_wrapper">
+                <div class="navbar_bars" onclick="toggleSidebar(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+
+                <div class="sidebar_overlay" onclick="closeSidebar(this, document.querySelector('.navbar_bars'))">
+                </div>
+
+                <!--===== Our Sidebar =====-->
+                <div class="navbar_sidebar">
+                    <div onclick="closeSidebar(this)" class="sidebar_close_icon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </div>
-
-                    <div class="sidebar_overlay" onclick="closeSidebar(this, document.querySelector('.navbar_bars'))">
-                    </div>
-
-                    <!--===== Our Sidebar =====-->
-                    <div class="navbar_sidebar">
-
-                    </div>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
 
-        <!--===== Main Content =====-->
+    <!--===== Main Content =====-->
+    <div id="container">
         <main>
             <div class="search wrapper">
                 <div class="search_ovelay"></div>
