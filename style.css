@@ -91,6 +91,7 @@ ul {
     bottom: 0;
     background-color: rgba(0 0 0 / 50%);
     transition: var(--transition);
+    z-index: 2;
 }
 
 .navbar_sidebar {
@@ -102,6 +103,7 @@ ul {
     background-color: var(--bg-primary);
     box-shadow: 2px 2px 16px rgba(0 0 0 / 12%);
     transition: var(--transition);
+    z-index: 100;
 }
 
 .navbar_sidebar.open {
@@ -124,7 +126,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    /* z-index: 1; */
     position: relative;
     width: fit-content;
     margin: 0 auto;
@@ -237,7 +239,7 @@ ul {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .footer_wrapper {
