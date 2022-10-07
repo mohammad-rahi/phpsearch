@@ -30,17 +30,22 @@ const closeSidebar = (thisElement, bars) => {
 const autoComplete = (event) => {
     let value = event.target.value;
 
-    let res = countries.filter(country => {
-        let regx = new RegExp(value, 'gi');
-        return country.match(regx)
-    })
+    if (value) {
+        let res = countries.filter(country => {
+            let regx = new RegExp(value, 'gi');
+            return country.match(regx)
+        })
 
-    let list = res.map(country => {
-        return `<li>${country}</li>`
-    }).join("");
+        let list = res.map(country => {
+            return `<li>${country}</li>`
+        }).join("");
 
-    suggestions.innerHTML = list;
-    suggestions.style.maxHeight = "350px";
+        suggestions.innerHTML = list;
+        suggestions.style.maxHeight = "350px";
+    }
+    else {
+        suggestions.innerHTML = ""
+    }
 }
 
 const resetSearch = () => {
