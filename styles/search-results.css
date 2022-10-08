@@ -1,5 +1,6 @@
 :root {
     --brave-color: #ff2101;
+    --brave-blue-color: #5755d9;
 }
 
 .search_header_wrapper {
@@ -252,13 +253,14 @@ body {
 }
 
 .header_bottom svg {
-    width: 20px;
+    width: 1rem;
 }
 
 .header_bottom_menu {
     display: flex;
     align-items: center;
     gap: 2rem;
+    font-size: 12px;
 }
 
 .header_bottom_link {
@@ -314,7 +316,8 @@ body {
 .settings_icon_mobile,
 .info_icon,
 .feedback_icon,
-.sidebar_header_close_icon {
+.sidebar_header_close_icon,
+.search_filter_location_icon {
     width: 30px;
     height: 30px;
     color: #555;
@@ -323,6 +326,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     transition: all 150ms ease-out;
 }
 
@@ -330,7 +334,8 @@ body {
 .settings_icon_mobile:hover,
 .info_icon:hover,
 .feedback_icon:hover,
-.sidebar_header_close_icon:hover {
+.sidebar_header_close_icon:hover,
+.search_filter_location_icon:hover {
     background-color: #efefef;
 }
 
@@ -339,14 +344,169 @@ body {
 }
 
 /*===== Search Results =====*/
+
 .search_results_wrapper {
     max-width: 1280px;
     width: 90vw;
-    margin: 1rem auto;
+    margin: 0 auto;
+}
+
+.search_results-wrapper {
     min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.search_filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    max-width: 650px;
+    margin: .65rem 0;
+    margin-left: 1rem;
+    user-select: none;
+}
+
+.search_filter svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.search_filter_options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search_filter_option {
+    position: relative;
+}
+
+.search_filter_handler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.search_filter_handler:hover {
+    color: var(--brave-blue-color);
+}
+
+.search_filter_popup {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    min-width: 200px;
+    background-color: #fff;
+    box-shadow: 2px 2px 16px rgba(0 0 0 / 12%);
+    border-radius: 10px;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.search_filter_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.search_filter_popup.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+}
+
+.popup1 {
+    max-height: 350px;
+    overflow-x: auto;
+}
+
+.popup1::-webkit-scrollbar {
+    width: 7px;
+}
+
+.popup1::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 100px;
+}
+
+.popup_search_form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #efefef;
+}
+
+.popup_search_icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_input input {
+    padding: .8rem 5px;
+    font-size: 1rem;
+    border: none;
+    width: 150px;
+}
+
+.popup_input input:focus {
+    outline: none;
+}
+
+.popup_clear {
+    max-height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #dfdfdf;
+    cursor: pointer;
+}
+
+.regions,
+.all_regions,
+.safe_search,
+.date_range {
+    padding: .5rem 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.regions li,
+.all_regions li,
+.safe_search li,
+.date_range li {
+    padding: 5px 1rem;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.regions li:hover,
+.all_regions li:hover,
+.safe_search li:hover,
+.date_range li:hover {
+    background-color: #efefef;
+}
+
+.all_regions_header {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #555;
+    gap: 1rem;
+    padding: .5rem 1rem 0 1rem;
 }
 
 .search_results_left,
@@ -620,11 +780,6 @@ body {
     }
 
     .header_bottom_menu {
-        font-size: 12px;
         gap: 1rem;
-    }
-
-    .header_bottom svg {
-        width: 1rem;
     }
 }
