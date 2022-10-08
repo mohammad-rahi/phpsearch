@@ -11,6 +11,7 @@
 
 body {
     background-color: #f2f4f7;
+    overflow-x: hidden;
 }
 
 .search_header {
@@ -810,5 +811,33 @@ body {
 
     .header_bottom_menu {
         gap: 1rem;
+    }
+
+    .search_filter {
+        white-space: nowrap;
+        margin-left: 0;
+    }
+
+    .location_option {
+        display: none;
+    }
+
+    .search_filter_options {
+        gap: .5rem;
+    }
+
+    .search_filter_option {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .header_bottom_right_icon{
+        display: none;
+    }
+
+    .search_filter_option svg {
+        width: 12px;
+        height: 12px;
     }
 }
