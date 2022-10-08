@@ -41,8 +41,15 @@ const autoComplete = (event) => {
         document.querySelector(".search_icon_left").style.display = "block";
         document.querySelector(".search_overlay").style.display = "block";
         document.querySelector(".close_icon").style.display = "block";
-        document.querySelector(".search_group").style.borderRadius = "10px 10px 0 0";
         suggestions.style.borderTop = "1px solid #efdfdf";
+
+        if (suggestions.scrollHeight) {
+            document.querySelector(".search_group").style.borderRadius = "10px 10px 0 0";
+        }
+        else {
+            document.querySelector(".search_group").style.borderRadius = "10px";
+        }
+
     }
     else {
         suggestions.innerHTML = ""

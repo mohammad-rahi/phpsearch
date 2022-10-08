@@ -8,10 +8,11 @@
 
     <!--===== Styles =====-->
     <link rel="stylesheet" href="../styles//global.css">
-    <link rel="stylesheet" href="../styles/search-header.css" />
+    <link rel="stylesheet" href="../styles/search-results.css" />
 </head>
 
 <body>
+    <!--===== Search Results Page Header =====-->
     <header class="search_header">
         <div class="search_header_wrapper">
             <!--===== Header Top =====-->
@@ -42,7 +43,7 @@
                                 </svg>
                             </div>
                             <input type="text" name="search" id="search" class="search_input"
-                                placeholder="Search the web privately..." oninput="autoComplete(event)"
+                                placeholder="Search the web privately..." value="Google" oninput="autoComplete(event)"
                                 onfocus="document.querySelector('.suggestions').style.display = 'block'; autoComplete(event)" />
                             <div class="close_icon" onclick="resetSearch()">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -159,9 +160,116 @@
         </div>
     </header>
 
+    <!--===== Search Results =====-->
+    <main>
+        <div class="search_results_wrapper">
+            <div class="search_results_left">
+                <div class="search_results_left_card search_results_left_card1"></div>
+                <div class="cards_scroll_wrapper">
+                    <button class="card_scroll_left btn"
+                        onclick="document.querySelectorAll('.cards_scroll')[0].scrollLeft += '-200'">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <div class="cards_scroll">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <button class="card_scroll_right btn"
+                        onclick="document.querySelectorAll('.cards_scroll')[0].scrollLeft += '200'">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="search_results_left_card search_results_left_card2"></div>
+
+                <div class="cards_scroll_wrapper">
+                    <button class="card_scroll_left btn"
+                        onclick="document.querySelectorAll('.cards_scroll')[1].scrollLeft += '-200'">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <div class="cards_scroll">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <button class="card_scroll_right btn"
+                        onclick="document.querySelectorAll('.cards_scroll')[1].scrollLeft += '200'">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="search_results_left_card search_results_left_card3"></div>
+                <div class="search_results_left_card search_results_left_card4"></div>
+            </div>
+            <div class="search_results_right">
+                <div class="search_results_right_card search_results_right_card1"></div>
+            </div>
+        </div>
+    </main>
+
+    <!--===== Search Results Footer =====-->
+    <footer class="search_results_footer">
+        <div class="search_results_footer_wrapper">
+            <div class="search_results_footer_content">
+                <div>
+                    <h6>Resources</h6>
+                    <ul>
+                        <li>Brave Search Help</li>
+                        <li>Transparency Report</li>
+                        <li>Report a security issue</li>
+                        <li>Status</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6>Products</h6>
+                    <ul>
+                        <li>Brave Browser</li>
+                        <li>Brave Search</li>
+                        <li>Brave Wallet</li>
+                        <li>Brave Talk</li>
+                        <li>Brave Firewall + VPN</li>
+                        <li>Brave Playlist</li>
+                        <li>Brave News</li>
+                        <li>Brave Rewards</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6>Policies</h6>
+                    <ul>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Use</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!--===== Main Script =====-->
     <script src="../script/index.js"></script>
-    <script src="../script/search-header.js"></script>
+    <script src="../script/search-results.js"></script>
     <script src="../script/data.js"></script>
 </body>
 
