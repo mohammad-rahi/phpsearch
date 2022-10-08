@@ -159,6 +159,87 @@ body {
     height: 20px;
 }
 
+.sidebar_wrapper {
+    position: absolute;
+}
+
+.sidebar_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0 0 0 / 20%);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.sidebar_overlay.active {
+    right: 0;
+}
+
+#sidebar {
+    width: 450px;
+    min-height: 100vh;
+    background-color: #f2f4f7;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    z-index: 100;
+    box-shadow: 2px 2px 8px rgba(0 0 0 / 12%);
+    transition: var(--transition);
+}
+
+#sidebar.active {
+    right: 0;
+}
+
+.sidebar_header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.sidebar_header_settings_icon_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-weight: 500;
+    font-size: 18px;
+    color: #555;
+}
+
+.sidebar_header_settings_icon {
+    width: 28px;
+}
+
+.sidebar_header_close_icon {
+    width: 23px;
+}
+
+.quick_settings {
+    background-color: #fff;
+    margin: 1rem 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    min-height: 400px;
+}
+
+.quick_settings_title {
+    color: #555;
+    font-size: 1rem;
+}
+
+.quick_settings_separate {
+    margin-top: .5rem;
+    display: block;
+    height: 1px;
+    background-color: #efefef;
+}
+
 /*===== Header Bottom =====*/
 .header_bottom {
     display: flex;
@@ -200,8 +281,10 @@ body {
 }
 
 .settings_icon,
+.settings_icon_mobile,
 .info_icon,
-.feedback_icon {
+.feedback_icon,
+.sidebar_header_close_icon {
     width: 30px;
     height: 30px;
     color: #555;
@@ -214,9 +297,15 @@ body {
 }
 
 .settings_icon:hover,
+.settings_icon_mobile:hover,
 .info_icon:hover,
-.feedback_icon:hover {
+.feedback_icon:hover,
+.sidebar_header_close_icon:hover {
     background-color: #efefef;
+}
+
+.settings_icon_mobile {
+    display: none;
 }
 
 @media only screen and (max-width: 1290px) {
@@ -246,6 +335,20 @@ body {
         gap: .5rem;
     }
 
+    .header_logo_icon_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95vw;
+        position: relative;
+    }
+
+    .settings_icon_mobile {
+        position: absolute;
+        right: 1rem;
+        display: block;
+    }
+
     .settings_icon {
         display: none;
     }
@@ -261,6 +364,25 @@ body {
     .suggestions {
         width: 90vw;
         margin: 0 auto;
+    }
+
+    .sidebar_header {
+        border-radius: 20px 20px 0 0;
+    }
+
+    #sidebar {
+        right: 0;
+        bottom: -90vh;
+        left: 0;
+        top: unset;
+        width: 100vw;
+        min-height: unset;
+        height: 90vh;
+        border-radius: 20px 20px 0 0;
+    }
+
+    #sidebar.active {
+        bottom: 0;
     }
 
 }
