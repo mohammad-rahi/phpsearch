@@ -168,6 +168,7 @@
     left: 0;
     background-color: var(--bg-primary);
     overflow-y: auto;
+    max-height: 350px;
 }
 
 .suggestions li {

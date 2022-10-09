@@ -21,7 +21,7 @@
     <header class="search_header">
         <div class="search_header_wrapper">
             <!--===== Header Top =====-->
-            <div class="header_top">
+            <div class="header_top" id="headerTop">
                 <div class="header_top_left">
                     <div class="header_logo_icon_wrapper">
                         <a href="all.html">
@@ -50,7 +50,7 @@
                                 </svg>
                             </div>
                             <input type="text" name="search" id="search" class="search_input"
-                                placeholder="Search the web privately..." oninput="autoComplete(event)"
+                                placeholder="Search the web privately..." value="Google" oninput="autoComplete(event)"
                                 onfocus="document.querySelector('.suggestions').style.display = 'block'; autoComplete(event)" />
                             <div class="close_icon" onclick="resetSearch()">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -355,7 +355,56 @@
 
             <div class="search_results_container">
                 <div class="search_results_left">
-                    <div class="search_results_left_card search_results_left_card1"></div>
+                    <div class="search_results_left_card search_results_left_card1">
+                        <div class="card_item card_item_top">
+                            <h2 class="card_title"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                    width="15px" height="15px">
+                                    <path fill="#fbc02d"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#e53935"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4caf50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1565c0"
+                                        d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg> Google</h2>
+                            <small class="card_url">google.com</small>
+                            <p class="card_description"><span>2 weeks</span> ago - Search the world's information,
+                                including webpages, images, videos and more. Google has many special features to help
+                                you find exactly what you're looking for.</p>
+                        </div>
+                        <div class="card_item card_item_middle">
+                            <div class="card_item">
+                                <h2 class="card_title">Drive - Personal Cloud Storage & Fi</h2>
+                                <p class="card_description">Learn about Google Drive’s file sharing platform that
+                                    provides a personal, secure</p>
+                            </div>
+                            <div class="card_item">
+                                <h2 class="card_title">Cloud Computing Services | Goo</h2>
+                                <p class="card_description">Meet your business challenges head on with cloud computing
+                                    services from Google,</p>
+                            </div>
+                            <div class="card_item">
+                                <h2 class="card_title">Maps</h2>
+                                <p class="card_description">Find local businesses, view maps and get driving directions
+                                    in Google Maps.</p>
+                            </div>
+                            <div class="card_item">
+                                <h2 class="card_title">The Keyword</h2>
+                                <p class="card_description">Discover all the latest about our products, technology, and
+                                    Google culture on our</p>
+                            </div>
+                        </div>
+                        <div class="card_item card_item_bottom">
+                            <h2 class="card_title"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                    width="20px" height="20px">
+                                    <path fill="#03A9F4"
+                                        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429" />
+                                </svg> Google (@Google) . Twitter</h2>
+                            <small class="card_url">twitter.com > Google</small>
+                            <p class="card_description">The latest tweets from Google (@Google)</p>
+                        </div>
+                    </div>
                     <div class="cards_scroll_wrapper">
                         <button class="card_scroll_left btn"
                             onclick="document.querySelectorAll('.cards_scroll')[0].scrollLeft += '-200'">
@@ -364,15 +413,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                             </svg>
                         </button>
-                        <div class="cards_scroll">
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                        </div>
+
+                        <div class="cards_scroll"></div>
+
                         <button class="card_scroll_right btn"
                             onclick="document.querySelectorAll('.cards_scroll')[0].scrollLeft += '200'">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -382,7 +425,26 @@
                         </button>
                     </div>
 
-                    <div class="search_results_left_card search_results_left_card2"></div>
+                    <div class="search_results_left_card search_results_left_card2">
+                        <div class="card_item card_normal">
+                            <h2 class="card_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="15px" height="15px">
+                                    <path fill="#fbc02d"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#e53935"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4caf50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1565c0"
+                                        d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg> Google - About Google, Our Culture & Company News
+                            </h2>
+                            <small class="card_url">google.com</small>
+                            <p class="card_description"><span>2 weeks</span> ago - Search the world's information,
+                                including webpages, images, videos and more. Google has many special features to help
+                                you find exactly what you're looking for.</p>
+                        </div>
+                    </div>
 
                     <div class="cards_scroll_wrapper">
                         <button class="card_scroll_left btn"
@@ -392,15 +454,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                             </svg>
                         </button>
-                        <div class="cards_scroll">
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                        </div>
+
+                        <div class="cards_scroll"></div>
+
                         <button class="card_scroll_right btn"
                             onclick="document.querySelectorAll('.cards_scroll')[1].scrollLeft += '200'">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -410,11 +466,189 @@
                         </button>
                     </div>
 
-                    <div class="search_results_left_card search_results_left_card3"></div>
-                    <div class="search_results_left_card search_results_left_card4"></div>
+                    <div class="search_results_left_card search_results_left_card3">
+                        <div class="card_item card_normal">
+                            <h2 class="card_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="15px" height="15px">
+                                    <path fill="#fbc02d"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#e53935"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4caf50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1565c0"
+                                        d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg> The Keyword | Google
+                            </h2>
+                            <small class="card_url">blog.google</small>
+                            <p class="card_description">5 days ago - Discover all the latest about our products,
+                                technology, and Google culture on our official blog.</p>
+                        </div>
+                        <div class="card_item card_normal">
+                            <h2 class="card_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="15px" height="15px">
+                                    <path fill="#fbc02d"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#e53935"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4caf50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1565c0"
+                                        d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg> Google - About Google, Our Culture & Company News
+                            </h2>
+                            <small class="card_url">google.com</small>
+                            <p class="card_description"><span>2 weeks</span> ago - Search the world's information,
+                                including webpages, images, videos and more. Google has many special features to help
+                                you find exactly what you're looking for.</p>
+                        </div>
+                        <div class="card_item card_normal">
+                            <h2 class="card_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px">
+                                    <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z" />
+                                    <path fill="#fff"
+                                        d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z" />
+                                </svg> Google - Home | Facebook
+                            </h2>
+                            <small class="card_url">blog.google</small>
+                            <p class="card_description">3 weeks ago - See posts, photos and more on Facebook</p>
+                        </div>
+                    </div>
+                    <div class="search_results_left_card search_results_left_card4">
+                        <div class="card_item card_normal">
+                            <h2 class="card_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="15px" height="15px">
+                                    <path fill="#fbc02d"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#e53935"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4caf50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1565c0"
+                                        d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg> Google Account
+                            </h2>
+                            <small class="card_url">account.google.com</small>
+                            <p class="card_description">In your Google Account, you can see and manage your info,
+                                activity, security options, and privacy preferences to make Google work better for you.
+                            </p>
+                        </div>
+                        <div class="card_item card_normal">
+                            <h2 class="card_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="15px" height="15px">
+                                    <path fill="#fbc02d"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#e53935"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4caf50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1565c0"
+                                        d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg> Google Accounts: Sign in
+                            </h2>
+                            <small class="card_url">account.google.com</small>
+                            <p class="card_description">Search the world's information, including webpages, images,
+                                videos and more. Google has many special features to help you find exactly what you're
+                                looking for.</p>
+                        </div>
+                        <div class="card_item card_normal">
+                            <h2 class="card_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="15px" height="15px">
+                                    <path fill="#fbc02d"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#e53935"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4caf50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1565c0"
+                                        d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg> Google Images
+                            </h2>
+                            <small class="card_url">images.google.com</small>
+                            <p class="card_description">Search the world's information, including webpages, images,
+                                videos and more. Google has many special features to help you find exactly what you're
+                                looking for.</p>
+                        </div>
+                        <div class="card_item card_normal">
+                            <h2 class="card_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="15px" height="15px">
+                                    <path fill="#fbc02d"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#e53935"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4caf50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1565c0"
+                                        d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg> Google Account
+                            </h2>
+                            <small class="card_url">myaccount.google.com</small>
+                            <p class="card_description">To choose what personal info to show when you interact with
+                                others on Google services, sign in to your account.</p>
+                        </div>
+                        <div class="card_item card_normal">
+                            <h2 class="card_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px">
+                                    <path fill="#48b564"
+                                        d="M35.76,26.36h0.01c0,0-3.77,5.53-6.94,9.64c-2.74,3.55-3.54,6.59-3.77,8.06	C24.97,44.6,24.53,45,24,45s-0.97-0.4-1.06-0.94c-0.23-1.47-1.03-4.51-3.77-8.06c-0.42-0.55-0.85-1.12-1.28-1.7L28.24,22l8.33-9.88	C37.49,14.05,38,16.21,38,18.5C38,21.4,37.17,24.09,35.76,26.36z" />
+                                    <path fill="#fcc60e"
+                                        d="M28.24,22L17.89,34.3c-2.82-3.78-5.66-7.94-5.66-7.94h0.01c-0.3-0.48-0.57-0.97-0.8-1.48L19.76,15	c-0.79,0.95-1.26,2.17-1.26,3.5c0,3.04,2.46,5.5,5.5,5.5C25.71,24,27.24,23.22,28.24,22z" />
+                                    <path fill="#2c85eb"
+                                        d="M28.4,4.74l-8.57,10.18L13.27,9.2C15.83,6.02,19.69,4,24,4C25.54,4,27.02,4.26,28.4,4.74z" />
+                                    <path fill="#ed5748"
+                                        d="M19.83,14.92L19.76,15l-8.32,9.88C10.52,22.95,10,20.79,10,18.5c0-3.54,1.23-6.79,3.27-9.3	L19.83,14.92z" />
+                                    <path fill="#5695f6"
+                                        d="M28.24,22c0.79-0.95,1.26-2.17,1.26-3.5c0-3.04-2.46-5.5-5.5-5.5c-1.71,0-3.24,0.78-4.24,2L28.4,4.74	c3.59,1.22,6.53,3.91,8.17,7.38L28.24,22z" />
+                                </svg> Google Maps
+                            </h2>
+                            <small class="card_url">maps.google.com</small>
+                            <p class="card_description">August 16, 2022 - Search the world's information, including
+                                webpages, images,
+                                videos and more. Google has many special features to help you find exactly what you're
+                                looking for.</p>
+                        </div>
+                        <div class="card_item card_normal">
+                            <h2 class="card_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px">
+                                    <path fill="#0078d4"
+                                        d="M8.421,14h0.052l0,0C11.263,14,13,12,13,9.5C12.948,6.945,11.263,5,8.526,5S4,6.945,4,9.5	C4,12,5.736,14,8.421,14z M4,17h9v26H4V17z M44,26.5c0-5.247-4.253-9.5-9.5-9.5c-3.053,0-5.762,1.446-7.5,3.684V17h-9v26h9V28l0,0	c0-2.209,1.791-4,4-4s4,1.791,4,4v15h9C44,43,44,27.955,44,26.5z" />
+                                </svg> Google - LinkedIn
+                            </h2>
+                            <small class="card_url">linkedin.com
+                                › company › google</small>
+                            <p class="card_description">2 weeks ago - 750 million+ members | Manage your professional
+                                identity. Build and engage with your professional network. Access knowledge, insights
+                                and opportunities.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="search_results_right">
-                    <div class="search_results_right_card search_results_right_card1"></div>
+                    <div class="search_results_right_card search_results_right_card1">
+                        <div class="card_right_header">
+                            <h2 class="card_right_title">Google</h2>
+                            <p class="card_right_description">American multinational technology company</p>
+                        </div>
+
+                        <figure class="card_right_images">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                        </figure>
+
+                        <div class="card_right_domain">
+                            <a href="">google.com</a>
+                        </div>
+                        <span class="devider"></span>
+                        <p class="card_right_description card_right_description2">Google LLC (/ˈɡuːɡəl/ ) is an American multinational
+                            technology company that focuses on
+                            search engine technology, online advertising, cloud computing, computer software, quantum
+                            computing, e-commerce, artificial intelligence, and consumer electronics. It has been
+                            referred to as the "most ... <a href="#">Wikipedia</a></p>
+                            <span class="devider"></span>
+                        <div class="card_right_footer">
+                            <p>Data form <a href="#">Wikipedia</a></p>
+                            <p>Feedback</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -464,7 +698,7 @@
     <script src="../script/data.js"></script>
     <script src="../script/header.js"></script>
     <script src="../script/search_filter.js"></script>
-    
+
     <script>
         document.querySelectorAll('.header_bottom_link').forEach(link => {
             if (window.location.pathname.includes(link.getAttribute('href'))) {
@@ -474,6 +708,44 @@
                 link.classList.remove("active")
             }
         });
+
+        document.querySelectorAll('.cards_scroll_wrapper').forEach(item => {
+            item.style.display = "none";
+        })
+
+        const fetchData = () => {
+            fetch('https://jsonplaceholder.typicode.com/photos')
+                .then(response => response.json())
+                .then(json => {
+                    let cards = json.slice(0, 10).map(image => {
+                        return `<div class="card">
+                                <figure style="background: url('${image.url}') no-repeat center/cover" class="scroll_card_image"></figure>
+
+                                <div class="scroll_card_info">
+                                    <a href="#" class="scroll_card_domain">🌐 techcrunch.com</a>
+
+                                    <a href="#" class="scroll_card_title">This Week in Apps: Twitter <br> gets an Edit
+                                        button, <br> Instagram increases ...</a>
+
+                                    <small class="scroll_card_time">13 hourse ago</small>
+                                </div>
+                            </div>`;
+                    }).join('');
+
+
+                    document.querySelectorAll(".cards_scroll").forEach(item => {
+                        item.innerHTML = cards;
+                    });
+
+                    document.querySelectorAll('.cards_scroll_wrapper').forEach(item => {
+                        item.style.display = "block";
+                    })
+
+                })
+        }
+
+        window.addEventListener('load', fetchData);
+
     </script>
 </body>
 

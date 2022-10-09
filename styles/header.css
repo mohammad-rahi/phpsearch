@@ -25,6 +25,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 1.3rem .5rem;
+    background-color: #f9fafd;
 }
 
 .header_top_left {
@@ -58,7 +59,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    width: 650px;
+    width: 685px;
     min-height: 45px;
     background-color: #fff;
 }
@@ -130,7 +131,7 @@ body {
 
 .suggestions {
     border-radius: 0 0 10px 10px;
-    width: 650px;
+    width: 685px;
     max-height: 400px;
     position: absolute;
     top: 45px;
@@ -256,7 +257,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 650px;
+    width: 685px;
     font-size: 14px;
     margin-left: 10.5rem;
     position: relative;
@@ -363,7 +364,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     .search_header_wrapper {
         width: 95vw;
     }

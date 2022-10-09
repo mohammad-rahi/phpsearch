@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
-    max-width: 650px;
+    max-width: 685px;
     margin: .65rem 0;
     margin-left: 1rem;
     user-select: none;
@@ -54,7 +54,6 @@
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
-    z-index: 10;
 }
 
 .location_popup {
