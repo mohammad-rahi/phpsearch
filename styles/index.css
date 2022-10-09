@@ -48,7 +48,7 @@
     right: 0;
     left: 0;
     height: 150px;
-    opacity: .1;
+    opacity: .05;
     background: url('https://cdn.search.brave.com/serp/v1/static/img/9bcd91b840e97936e9b2318c58fb2ab3003590c43608087cdb571260eb173f85-waves-bg-bottom.svg') no-repeat center/cover;
     transform: rotate(180deg);
 }
@@ -60,7 +60,7 @@
     right: 0;
     left: 0;
     height: 150px;
-    opacity: .1;
+    opacity: .05;
     background: url('https://cdn.search.brave.com/serp/v1/static/img/9bcd91b840e97936e9b2318c58fb2ab3003590c43608087cdb571260eb173f85-waves-bg-bottom.svg') no-repeat center/cover;
 }
 
