@@ -60,11 +60,11 @@
                 .then(json => {
                     let cards = json.slice(0, endNumber).map(image => {
                         return `<div class="card_image">
-                    <a href="images-details.html?id=${image.id}">
+                    <a href="details.html?id=${image.id}">
                         <figure style="background: url('${image.url}') no-repeat center/cover"></figure>    
                     </a>
 
-                    <a href="images-details.html?id=${image.id}">
+                    <a href="details.html?id=${image.id}">
                         <h3>${image.title.slice(0, 25)}</h3>    
                     </a>
                 </div>`;

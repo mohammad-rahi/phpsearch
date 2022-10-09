@@ -60,7 +60,9 @@
                 .then(json => {
                     let cards = json.slice(0, endNumber).map(image => {
                         return `<div class="video_card">
-                    <figure style="background: url('${image.url}') no-repeat center/cover"></figure>
+                            <a href="details.html?id=${image.id}">
+                        <figure style="background: url('${image.url}') no-repeat center/cover"></figure>    
+                    </a>
 
                     <div class="video_info">
                         <div class="video_owner">
@@ -72,7 +74,9 @@
                             <p>Made by Google</p>
                         </div>
 
-                        <h3>${image.title.slice(0, 25)}</h3>
+                        <a href="details.html?id=${image.id}">
+                        <h3>${image.title.slice(0, 25)}</h3>    
+                    </a>
                     </div>
                 </div>`;
                     }).join('');

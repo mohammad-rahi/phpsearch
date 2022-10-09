@@ -430,6 +430,10 @@ body {
     }
 
     @media only screen and (max-width: 600px) {
+        .suggestions{
+            max-height: 350px;
+        }
+
         .videos {
             display: none;
         }
