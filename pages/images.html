@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--===== Styles =====-->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/all.css" />
+    <link rel="stylesheet" href="../styles/images.css" />
+</head>
+
+<body>
+    <!--===== Search Results Page Header =====-->
+    <div id="header"></div>
+
+    <!--===== Search Results =====-->
+    <main>
+        <div id="search_filter"></div>
+        <div class="search_results_images_container">
+            <div class="cards">
+                <div class="loading">
+                    <p>Loading...</p>
+                </div>
+            </div>
+            <div class="show_more" onclick="loadMore()">
+                <button class="more_images">Show more</button>
+            </div>
+        </div>
+    </main>
+
+    <!--===== Search Results Footer =====-->
+    <div id="footer"></div>
+
+    <!--===== Main Script =====-->
+    <script src="../script/all.js"></script>
+    <script src="../script/data.js"></script>
+    <script src="../components/header.js"></script>
+    <script src="../components/search_filter.js"></script>
+    <script src="../components/footer.js"></script>
+
+    <script>
+        document.querySelectorAll('.header_bottom_link').forEach(link => {
+            if (window.location.pathname.includes(link.getAttribute('href'))) {
+                link.classList.add("active");
+            }
+            else {
+                link.classList.remove("active")
+            }
+        });
+
+
+        let endNumber = 20;
+
+        const fetchImages = () => {
+            fetch('https://jsonplaceholder.typicode.com/photos')
+                .then(response => response.json())
+                .then(json => {
+                    let cards = json.slice(0, endNumber).map(image => {
+                        return `<div class="card_image">
+                    <a href="images-details.html?id=${image.id}">
+                        <figure style="background: url('${image.url}') no-repeat center/cover"></figure>    
+                    </a>
+
+                    <a href="images-details.html?id=${image.id}">
+                        <h3>${image.title.slice(0, 25)}</h3>    
+                    </a>
+                </div>`;
+                    }).join('');
+
+                    document.querySelector('.show_more').style.display = 'block'
+
+                    document.querySelector('.cards').innerHTML = cards;
+                })
+        }
+
+        const loadMore = () => {
+            endNumber += 20
+            fetchImages()
+        }
+
+        window.addEventListener('load', fetchImages);
+    </script>
+</body>
+
+</html>
