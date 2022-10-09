@@ -171,6 +171,7 @@ const searchFilterStyles = `<style>
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
+    z-index: 10;
 }
 
 .location_popup {
@@ -388,6 +389,41 @@ input:checked+.slider:before {
     gap: 1rem;
     padding: .5rem 1rem 0 1rem;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .date_range_popup {
+        left: unset;
+        right: 40%;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .search_filter {
+        white-space: nowrap;
+        margin-left: 0;
+    }
+
+    .location_option {
+        display: none;
+    }
+
+    .search_filter_options {
+        gap: .5rem;
+    }
+
+    .search_filter_option {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .search_filter_option svg {
+        width: 12px;
+        height: 12px;
+    }
+}
+
 </style>`
 
 document.getElementById("search_filter").innerHTML = searchFilter + searchFilterStyles;

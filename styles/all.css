@@ -123,9 +123,6 @@
 @media only screen and (max-width: 800px) {
     .search_results_container {
         grid-template-columns: repeat(1, minmax(0, 1fr));
-        width: 95vw;
-        /* display: flex;
-        flex-direction: column-reverse; */
     }
 
     .search_results_left,
@@ -148,59 +145,4 @@
         display: none;
     }
 
-}
-
-@media only screen and (max-width: 600px) {
-    .videos {
-        display: none;
-    }
-
-    .videos_mobile {
-        display: block;
-    }
-
-    .date_range_popup {
-        left: unset;
-        right: 40%;
-    }
-}
-
-@media only screen and (max-width: 499px) {
-
-    .search_group input,
-    .suggestions {
-        font-size: 15px;
-    }
-
-    .header_bottom_menu {
-        gap: 1rem;
-    }
-
-    .search_filter {
-        white-space: nowrap;
-        margin-left: 0;
-    }
-
-    .location_option {
-        display: none;
-    }
-
-    .search_filter_options {
-        gap: .5rem;
-    }
-
-    .search_filter_option {
-        font-size: 12px;
-    }
-}
-
-@media only screen and (max-width: 380px) {
-    .header_bottom_right_icon {
-        display: none;
-    }
-
-    .search_filter_option svg {
-        width: 12px;
-        height: 12px;
-    }
 }
