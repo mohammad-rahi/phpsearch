@@ -5,13 +5,11 @@ const sidebarOverlay = document.querySelector('.sidebar_overlay');
 const sidebarOpen = () => {
     sidebar.classList.add("active")
     sidebarOverlay.classList.add("active");
-    document.querySelector('.footer').style.zIndex = "0";
 };
 
 const sidebarClose = () => {
     sidebar.classList.remove("active")
     sidebarOverlay.classList.remove("active");
-    document.querySelector('.footer').style.zIndex = "1";
 };
 
 const autoComplete = (event) => {
