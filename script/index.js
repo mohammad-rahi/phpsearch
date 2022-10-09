@@ -1,25 +1,17 @@
 const search = document.querySelector('#search');
 const suggestions = document.querySelector(".suggestions");
-const searchOverlay = document.querySelector(".search_ovelay");
-// const header = document.querySelector(".navbar_header");
-// const footer = document.querySelector(".footer");
+const sidebarOverlay = document.querySelector('.sidebar_overlay');
 
-const toggleSidebar = (thisElement) => {
-    let sidebar = document.querySelector(".navbar_sidebar");
-
-    sidebar.classList.toggle("open");
-    document.querySelector(".sidebar_overlay").classList.add("open");
-    document.querySelector("#container").classList.toggle("open");
-    document.querySelector(".search").classList.add("open");
-    thisElement.classList.toggle("open");
+const sidebarOpen = () => {
+    sidebar.classList.add("active")
+    sidebarOverlay.classList.add("active");
+    document.querySelector('.footer').style.zIndex = "0";
 };
 
-const closeSidebar = (thisElement, bars) => {
-    document.querySelector(".navbar_sidebar").classList.remove("open");
-    thisElement.classList.remove("open");
-    document.querySelector("#container").classList.remove("open");
-    document.querySelector(".search").classList.remove("open");
-    document.querySelector(".sidebar_overlay").classList.remove("open");
+const sidebarClose = () => {
+    sidebar.classList.remove("active")
+    sidebarOverlay.classList.remove("active");
+    document.querySelector('.footer').style.zIndex = "1";
 };
 
 const autoComplete = (event) => {
@@ -90,5 +82,3 @@ searchOverlay.addEventListener("click", () => {
 
 search.addEventListener("input", autoComplete);
 search.addEventListener("focus", suggestionsBLock);
-// header.addEventListener("click", suggestionsBLock);
-// footer.addEventListener("click", suggestionsBLock);
