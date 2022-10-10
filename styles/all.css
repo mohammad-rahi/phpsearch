@@ -281,5 +281,14 @@
         height: unset;
         aspect-ratio: 16/7;
     }
+}
 
+@media only screen and (max-width: 600px){
+    .card_item_middle {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .card_item svg{
+        min-width: 15px;
+    }
 }

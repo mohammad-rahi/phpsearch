@@ -38,4 +38,8 @@
     .search_results_footer_content {
         padding: 3rem 1rem 5rem 1rem;
     }
+
+    .search_results_footer_content >div:not(:first-child) {
+        padding-left: 1rem;
+    }
 }

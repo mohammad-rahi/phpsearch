@@ -7,6 +7,11 @@
     padding: 0 1rem;
 }
 
+.navbar_wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
 .navbar_nav {
     display: flex;
     justify-content: space-between;
@@ -44,7 +49,7 @@
 #container::before {
     content: '';
     position: absolute;
-    top: -10px;
+    top: 0;
     right: 0;
     left: 0;
     height: 150px;
@@ -57,7 +62,7 @@
 #container::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
     right: 0;
     left: 0;
     height: 150px;
@@ -67,7 +72,7 @@
 }
 
 .search {
-    min-height: 89vh;
+    /* min-height: 89vh; */
     padding-top: 150px;
 }
 
@@ -191,12 +196,12 @@
     width: 600px;
     max-height: 350px;
     position: absolute;
-    top: 55px;
+    top: 50px;
     left: 0;
     background-color: var(--bg-primary);
     overflow-y: auto;
-    box-shadow: 2px 2px 16px rgba(0 0 0 / 12%);
-
+    box-shadow: 2px 2px 16px -16px rgba(0 0 0 / 12%);
+    z-index: 10;
 }
 
 .suggestions::-webkit-scrollbar {
@@ -238,9 +243,24 @@
     display: block !important;
 }
 
-.search_logo{
+.search_logo {
     width: 253px;
     height: 78px;
+}
+
+.search_form_mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-primary);
+    z-index: 100;
+    display: none;
+}
+
+.search_form_mobile.active {
+    display: block;
 }
 
 /*===== Footer =====*/
@@ -250,23 +270,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     padding: 0 1rem;
 }
 
 .footer_wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     align-items: center;
     gap: .5rem;
+    font-size: 13px;
 }
 
 .footer_menu {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
+    color: #555;
+    margin-left: 1rem;
+    font-weight: 300;
 }
 
 @media only screen and (min-width: 1700px) {
@@ -288,9 +317,20 @@
         margin-left: 0;
     }
 
+    .search_icon {
+        display: none !important;
+    }
+
+    .close_icon {
+        width: 40px;
+    }
+
     .footer_wrapper {
         flex-direction: column;
-        padding: 5px 0;
+        padding: .5rem 0;
+    }
+    .footer_menu{
+        gap: .5rem;
     }
 
     .search_group,
@@ -298,19 +338,19 @@
         width: 90vw;
     }
 
-    .search{
+    .search {
         padding-top: 100px;
     }
 
-    .search_form{
+    .search_form {
         margin-top: 1rem;
     }
 
-    .suggestions{
+    .suggestions {
         max-height: 300px;
     }
 
-    .search_logo{
+    .search_logo {
         width: 200px;
     }
 }
@@ -319,9 +359,5 @@
     .navbar_link {
         font-size: 15px;
         padding: .5rem .7rem;
-    }
-
-    footer {
-        font-size: 15px;
     }
 }

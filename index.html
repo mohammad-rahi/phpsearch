@@ -16,12 +16,13 @@
     <link rel="stylesheet" href="./styles/all.css">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/index_mobile.css">
 </head>
 
 <body style="background-color: #eef2f6;">
     <!--====== Header =====-->
     <header class="navbar_header">
-        <nav class="navbar_nav wrapper">
+        <nav class="navbar_nav navbar_wrapper">
             <ul class="navbar_menu">
                 <li class="navbar_list">
                     <a class="navbar_link active" href="#">Web</a>
@@ -92,8 +93,7 @@
                 <div class="search_wrapper">
                     <!-- <h2 class="search_title">phpSearch</h2> -->
                     <figure class="search_logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 114 35">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 114 35">
                             <path fill="#5E6175" fill-rule="evenodd"
                                 d="M38.084 18.876V6.915h1.146c.933 0 1.69.756 1.69 1.688v5.318c1.837-1.636 3.4-2.29 5.481-2.333 3.993-.081 7.458 2.88 7.788 6.853.393 4.747-3.065 8.32-7.57 8.32-4.946 0-8.535-3.061-8.535-7.885Zm2.79.94c.279 2.47 2.643 4.512 5.136 4.551 3.248.05 5.46-2.063 5.46-5.19 0-3.126-2.163-5.19-5.32-5.19-3.373-.007-5.66 2.44-5.277 5.828Zm18.048-7.929v2.13c1.785-1.976 2.842-2.508 4.93-2.508.608 0 1.215.05 1.815.146v2.83a7.352 7.352 0 0 0-1.965-.262c-1.513 0-2.783.494-3.713 1.428-.817.818-1.06 1.458-1.06 2.743v7.879h-2.94V11.887h2.933Zm7.443 4.758c.151-1.402.424-2.16 1.028-2.89 1.21-1.482 3.389-2.246 6.473-2.246 2.45 0 4.236.38 5.476 1.196 1.03.67 1.453 1.663 1.453 3.413v6.389c0 1.4.364 1.895 1.361 1.868a6.24 6.24 0 0 0 .666-.06v1.926a4.374 4.374 0 0 1-1.542.232c-1.844 0-2.69-.554-3.265-2.16-1.814 1.663-3.69 2.363-6.382 2.363-3.599 0-5.807-1.634-5.807-4.29a3.776 3.776 0 0 1 2.267-3.5c1.09-.467 1.755-.613 4.87-.934 2.66-.262 3.116-.321 3.871-.556.817-.262 1.181-.7 1.181-1.429 0-1.547-1.3-2.246-4.023-2.246-2.574 0-3.9.51-4.433 1.809a1.755 1.755 0 0 1-1.622 1.107l-1.572.008ZM78 19.096a28.853 28.853 0 0 1-5.718 1.05c-2.632.262-3.448.76-3.448 2.071 0 1.458 1.21 2.225 3.599 2.225 1.965 0 3.448-.495 4.508-1.459.846-.788 1.059-1.341 1.059-2.718v-1.169Zm11.922 7.174h-.757a1.733 1.733 0 0 1-1.57-.974l-6.344-13.41h1.762a2.592 2.592 0 0 1 2.384 1.526l4.233 9.638 4.374-9.675a2.592 2.592 0 0 1 2.371-1.498h1.602l-6.493 13.434c-.295.59-.9.963-1.562.959Zm10.042-6.358c.302 2.772 2.476 4.492 5.716 4.492 1.84 0 3.218-.546 4.072-1.636a2.626 2.626 0 0 1 2.055-.988h1.706c-1.486 3.267-4.144 4.873-8.108 4.873-4.95 0-8.287-3.005-8.287-7.498 0-4.492 3.418-7.643 8.349-7.643 3.567 0 6.437 1.604 7.593 4.29.514 1.236.725 2.333.725 4.112l-13.82-.002Zm10.828-2.224c-.666-2.538-2.631-3.97-5.354-3.97-2.723 0-4.689 1.431-5.384 3.97h10.738Z"
                                 clip-rule="evenodd" />
@@ -123,7 +123,7 @@
                         </svg>
                     </figure>
 
-                    <form class="search_form" action="pages/all.html" autocomplete="off">
+                    <form class="search_form" id="search_form" action="pages/all.html" autocomplete="off">
                         <div class="search_group">
                             <div class="search_icon_left">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -134,7 +134,7 @@
                             </div>
                             <input type="text" name="search" id="search" class="search_input"
                                 placeholder="Search the web privately..." oninput="autoComplete(event)"
-                                onfocus="document.querySelector('.suggestions').style.display = 'block'; autoComplete(event)" />
+                                onfocus="document.querySelector('.suggestions').style.display = 'block'; autoComplete(event);" />
                             <div class="close_icon" onclick="resetSearch()">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -152,6 +152,37 @@
                         <ul id="suggestions" class="suggestions"></ul>
                     </form>
 
+                    <div class="search_form_mobile">
+                        <form class="search_form" action="pages/all.html" autocomplete="off">
+                            <div class="search_group">
+                                <div class="search_back_icon" onclick="searchMobileBack()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                                    </svg>
+                                </div>
+                                <input type="text" name="search" id="search" class="search_input"
+                                    placeholder="Search the web privately..." oninput="autoComplete(event)"
+                                    onfocus="document.querySelector('.suggestions').style.display = 'block'; autoComplete(event);" />
+                                <div class="close_icon" onclick="resetSearchMobile()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </div>
+                                <div class="search_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul id="suggestions" class="suggestions"></ul>
+                        </form>
+                    </div>
+
                     <!-- <p class="search_description">A popular general-purpose scripting language</p> -->
                 </div>
             </div>
@@ -159,25 +190,12 @@
 
         <!--===== Footer =====-->
         <footer class="footer">
-            <div class="wrapper footer_wrapper">
+            <div class="footer_wrapper">
+                <strong>&copy; Brave Software</strong>
                 <ul class="footer_menu">
-                    <li class="footer_list">
-                        <a class="footer_link" href="#">Contact</a>
-                    </li>
-                    <li class="footer_list">
-                        <a class="footer_link" href="#">About</a>
-                    </li>
-                    <li class="footer_list">
-                        <a class="footer_link" href="#">Admin</a>
-                    </li>
-                </ul>
-                <ul class="footer_menu">
-                    <li class="footer_list">
-                        Powered by phpSearch
-                    </li>
-                    <li class="footer_list">
-                        &copy; 2019 phpSearch
-                    </li>
+                    <li>Anniversary announcement</li> | 
+                    <li>Helpful answers</li> | 
+                    <li>Report a security issue</li>
                 </ul>
             </div>
         </footer>
@@ -185,6 +203,7 @@
 
     <!--===== Main Script =====-->
     <script src="./script/index.js"></script>
+    <script src="./script/index_mobile.js"></script>
     <script src="./script/data.js"></script>
     <script src="./script/header.js"></script>
 </body>

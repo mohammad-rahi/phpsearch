@@ -50,7 +50,7 @@
                                 </svg>
                             </div>
                             <input type="text" name="search" id="search" class="search_input"
-                                placeholder="Search the web privately..." value="Google" oninput="autoComplete(event)"
+                                placeholder="Search the web privately..." oninput="autoComplete(event)"
                                 onfocus="document.querySelector('.suggestions').style.display = 'block'; autoComplete(event)" />
                             <div class="close_icon" onclick="resetSearch()">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -638,12 +638,13 @@
                             <a href="">google.com</a>
                         </div>
                         <span class="devider"></span>
-                        <p class="card_right_description card_right_description2">Google LLC (/ˈɡuːɡəl/ ) is an American multinational
+                        <p class="card_right_description card_right_description2">Google LLC (/ˈɡuːɡəl/ ) is an American
+                            multinational
                             technology company that focuses on
                             search engine technology, online advertising, cloud computing, computer software, quantum
                             computing, e-commerce, artificial intelligence, and consumer electronics. It has been
                             referred to as the "most ... <a href="#">Wikipedia</a></p>
-                            <span class="devider"></span>
+                        <span class="devider"></span>
                         <div class="card_right_footer">
                             <p>Data form <a href="#">Wikipedia</a></p>
                             <p>Feedback</p>
@@ -712,6 +713,8 @@
         document.querySelectorAll('.cards_scroll_wrapper').forEach(item => {
             item.style.display = "none";
         })
+
+        document.querySelector('#search').value = window.location.href.split('?search=')[1];
 
         const fetchData = () => {
             fetch('https://jsonplaceholder.typicode.com/photos')
