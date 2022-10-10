@@ -64,7 +64,13 @@ const checkWindowWidth = () => {
                 document.querySelector(".search_icon_left").style.display = "block";
                 // document.querySelector(".search_overlay").style.display = "block";
                 document.querySelector(".close_icon").style.display = "block";
-                suggestions.style.borderTop = "1px solid #efdfdf";
+                
+                if(suggestions.scrollHeight){
+                    suggestions.style.borderTop = "1px solid #efdfdf";
+                }
+                else{
+                    suggestions.style.borderTop = "none";
+                }
 
                 if (suggestions.style.display === "none") {
                     document.querySelector(".search_group").style.borderRadius = "10px 10px 0 0";
