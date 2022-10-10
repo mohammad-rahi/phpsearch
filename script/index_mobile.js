@@ -33,7 +33,7 @@ const autoCompleteMobile = (event) => {
     }
 }
 
-const resetSearchMobile = () => {
+const resetSearchMobile = (thisItem) => {
     searchMobile.value = suggestionsMobile.innerHTML = "";
     searchMobile.focus();
 
@@ -41,6 +41,7 @@ const resetSearchMobile = () => {
     document.querySelector(".search_icon_left").style.display = "none";
     document.querySelector(".search_group").style.borderRadius = "10px";
     suggestionsMobile.style.borderTop = "none";
+    thisItem.style.display = "none"
 }
 
 const searchOverlayHandlerMobile = () => {

@@ -1,5 +1,5 @@
-const sidebar = document.querySelector('#sidebar'),
-    sidebarOverlay = document.querySelector('.sidebar_overlay');
+const sidebar = document.querySelector('#sidebar');
+// sidebarOverlay = document.querySelector('.sidebar_overlay');
 
 const sidebarOpen = () => {
     sidebar.classList.add("active")
