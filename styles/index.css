@@ -132,6 +132,10 @@
     width: 40px;
 }
 
+.shortcart_icon_title {
+    cursor: pointer;
+}
+
 .search_form {
     position: relative;
     margin-top: 3rem;
