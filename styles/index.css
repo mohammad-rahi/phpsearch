@@ -118,9 +118,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    border-radius: 15px;
     background-color: #dfdfef;
     padding: 1rem;
+    cursor: pointer;
+}
+
+.shortcart_icon_wrapper:hover {
+    box-shadow: 2px 2px 16px rgba(0 0 0 / 12%);
 }
 
 .shortcart_icon svg {
