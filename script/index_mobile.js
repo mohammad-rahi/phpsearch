@@ -57,6 +57,8 @@ const searchMobileBack = () => {
     document.querySelector('#search_form .suggestions').style.display = 'none';
     document.querySelector('#search_form .close_icon').style.display = 'none';
     document.querySelector('#search_form .search_icon_left').style.display = 'none';
+
+    resetSearchMobile();
 }
 
 const suggestionsBLockMobile = () => {

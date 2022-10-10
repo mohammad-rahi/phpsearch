@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="images/brave-logo-small.svg" type="image/x-icon">
 
     <title>Private Search Engine - Brave Search</title>
-    <meta name="description" content="phpSearch is a popular search engine to find hidden content of PHP">
+    <meta name="description" content="Search the web privately ...">
 
     <!--===== Styles =====-->
     <link rel="stylesheet" href="./styles/header.css">
@@ -135,18 +135,25 @@
                             <input type="text" name="search" id="search" class="search_input"
                                 placeholder="Search the web privately..." oninput="autoComplete(event)"
                                 onfocus="document.querySelector('.suggestions').style.display = 'block'; autoComplete(event);" />
-                            <div class="close_icon" onclick="resetSearch()">
+                            <div class="close_icon" onclick="resetSearch(this)">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </div>
-                            <div class="search_icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            <div class="mice_icon search_icon">
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg> -->
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
                                 </svg>
+
                             </div>
                         </div>
                         <ul id="suggestions" class="suggestions"></ul>
@@ -193,8 +200,8 @@
             <div class="footer_wrapper">
                 <strong>&copy; Brave Software</strong>
                 <ul class="footer_menu">
-                    <li>Anniversary announcement</li> | 
-                    <li>Helpful answers</li> | 
+                    <li>Anniversary announcement</li> |
+                    <li>Helpful answers</li> |
                     <li>Report a security issue</li>
                 </ul>
             </div>
@@ -206,6 +213,7 @@
     <script src="./script/index_mobile.js"></script>
     <script src="./script/data.js"></script>
     <script src="./script/header.js"></script>
+    <script src="./script/speechText.js"></script>
 </body>
 
 </html>

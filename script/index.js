@@ -13,7 +13,7 @@ const sidebarClose = () => {
     sidebarOverlay.classList.remove("active");
 };
 
-const resetSearch = () => {
+const resetSearch = (thisItem) => {
     search.value = suggestions.innerHTML = "";
     search.focus();
 
@@ -21,6 +21,7 @@ const resetSearch = () => {
     document.querySelector(".search_icon_left").style.display = "none";
     document.querySelector(".search_group").style.borderRadius = "10px";
     suggestions.style.borderTop = "none";
+    thisItem.style.display = "none"
 }
 
 const searchOverlayHandler = () => {
