@@ -281,6 +281,17 @@
     display: block !important;
 }
 
+.navbar_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle_menu_icon{
+    width: 20px;
+    height: 20px;
+}
+
 .search_logo {
     width: 253px;
     height: 78px;

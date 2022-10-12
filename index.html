@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/index_mobile.css">
+    <link rel="stylesheet" href="./styles/sidebar-left.css">
 </head>
 
 <body style="background-color: #eef2f6;">
@@ -36,9 +37,212 @@
                 <li class="navbar_list">
                     <a class="navbar_link" href="#">News</a>
                 </li>
+                <li class="navbar_list">
+                    <a class="navbar_link" href="#" onclick="sidebarLeftOpen()">
+                        <img src="./images/circled-menu.png" alt="Apps" class="circle_menu_icon" />
+                    </a>
+                </li>
             </ul>
 
-            <!--===== Sidebar =====-->
+            <!--===== Sidebar Left =====-->
+            <div class="sidebar_left_wrapper">
+                <div class="sidebar_left_overlay" onclick="sidebarLeftClose()"></div>
+                <div id="sidebar_left">
+                    <div class="sidebar_left_close_icon" onclick="sidebarLeftClose()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+
+                    <div class="sidebar_left_content">
+                        <div class="sidebar_left_tabs">
+                            <ul class="sidebar_left_menu">
+                                <li class="sidebar_left_list">
+                                    <a href="#" class="sidebar_left_link active">
+                                        <span>All</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar_left_list">
+                                    <a href="#" class="sidebar_left_link">
+                                        <span>Apps</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar_left_list">
+                                    <a href="#" class="sidebar_left_link">
+                                        <span>Compute</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar_left_list">
+                                    <a href="#" class="sidebar_left_link">
+                                        <span>Storage</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar_left_list">
+                                    <a href="#" class="sidebar_left_link">
+                                        <span>Networking</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar_left_list">
+                                    <a href="#" class="sidebar_left_link">
+                                        <span>Hosting</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="top_apps">
+                            <strong class="apps_title">Top Apps</strong>
+                            <div class="apps_wrapper">
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/gmail.png" alt="Gmail" />
+                                        <figcaption>
+                                            <p>Gmail</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/discoed_bubble.png" alt="Discord" />
+                                        <figcaption>
+                                            <p>Discord</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/airbnb.png" alt="Airbnb" />
+                                        <figcaption>
+                                            <p>Airbnb</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/slack.png" alt="Slack" />
+                                        <figcaption>
+                                            <p>Slack</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/reddit.png" alt="Reddit" />
+                                        <figcaption>
+                                            <p>Reddit</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/yahoo.png" alt="Yahoo" />
+                                        <figcaption>
+                                            <p>Yahoo</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/evernote.png" alt="Evernote" />
+                                        <figcaption>
+                                            <p>Evernote</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/dropbox.png" alt="Dropbox" />
+                                        <figcaption>
+                                            <p>Dropbox</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recommended_apps">
+                            <strong class="apps_title">Recommended</strong>
+                            <div class="recommended_apps_wrapper">
+                                <div class="recommended_app">
+                                    <img src="./images/vps.png" alt="Virtual Private Server" />
+                                    <div>
+                                        <h4>Virtual Private Server</h4>
+                                        <p>Flexible virtual machines</p>
+                                    </div>
+                                </div>
+                                <div class="recommended_app">
+                                    <img src="./images/analytics.png" alt="Business Analysis">
+                                    <div>
+                                        <h4>Business Analysis</h4>
+                                        <p>Start your business</p>
+                                    </div>
+                                </div>
+                                <div class="recommended_app">
+                                    <img src="./images/clouds.png" alt="Cloud Hosting">
+                                    <div>
+                                        <h4>Cloud Hosting</h4>
+                                        <p>Powerfull bare metal servers</p>
+                                    </div>
+                                </div>
+                                <div class="recommended_app">
+                                    <img src="./images/server.png" alt="Dedicated Servers">
+                                    <div>
+                                        <h4>Dedicated Servers</h4>
+                                        <p>Powerfull bare metal servers</p>
+                                    </div>
+                                </div>
+                                <div class="recommended_app">
+                                    <img src="./images/data-protection.png" alt="Data Security">
+                                    <div>
+                                        <h4>Data Security</h4>
+                                        <p>Keep your data safe</p>
+                                    </div>
+                                </div>
+                                <div class="recommended_app">
+                                    <img src="./images/web.png" alt="Web Hosting">
+                                    <div>
+                                        <h4>Web Hosting</h4>
+                                        <p>Start hosting your website</p>
+                                    </div>
+                                </div>
+                                <div class="recommended_app">
+                                    <img src="./images/vps.png" alt="Virtual Private Server" />
+                                    <div>
+                                        <h4>Virtual Private Server</h4>
+                                        <p>Flexible virtual machines</p>
+                                    </div>
+                                </div>
+                                <div class="recommended_app">
+                                    <img src="./images/analytics.png" alt="Business Analysis">
+                                    <div>
+                                        <h4>Business Analysis</h4>
+                                        <p>Start your business</p>
+                                    </div>
+                                </div>
+
+                                <div class="recommended_app">
+                                    <img src="./images/clouds.png" alt="Cloud Hosting">
+                                    <div>
+                                        <h4>Cloud Hosting</h4>
+                                        <p>Powerfull bare metal servers</p>
+                                    </div>
+                                </div>
+
+                                <div class="recommended_app">
+                                    <img src="./images/server.png" alt="Dedicated Servers">
+                                    <div>
+                                        <h4>Dedicated Servers</h4>
+                                        <p>Powerfull bare metal servers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--===== Sidebar Right Wrapper =====-->
             <div>
                 <div class="settings_icon" onclick="sidebarOpen()">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -49,7 +253,7 @@
                     </svg>
                 </div>
 
-                <!--===== Sidebar =====-->
+                <!--===== Sidebar Right =====-->
                 <div class="sidebar_wrapper">
                     <div class="sidebar_overlay" onclick="sidebarClose()"></div>
                     <div id="sidebar">
@@ -265,6 +469,7 @@
     </div>
 
     <!--===== Main Script =====-->
+    <script src="./script/sidebar-left.js"></script>
     <script src="./script/index.js"></script>
     <script src="./script/index_mobile.js"></script>
     <script src="./script/data.js"></script>
