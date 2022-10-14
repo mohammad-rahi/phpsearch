@@ -60,6 +60,13 @@
 .sidebar_left_menu {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    row-gap: .5rem;
+    scrollbar-width: none;
+}
+
+.sidebar_left_menu::-webkit-scrollbar {
+    display: none;
 }
 
 .sidebar_left_link {
@@ -70,19 +77,29 @@
     border-bottom: 3px solid transparent;
     padding: .3rem 0;
     transition: var(--transition);
+    color: #555;
 }
 
-.sidebar_left_link:hover>span,
+.sidebar_left_link:hover>span {
+    color: #000;
+}
+
 .sidebar_left_link.active>span {
     border-color: var(--brave-color);
 }
 
-.sidebar_left_content{
+.sidebar_left_content {
     overflow-y: auto;
     height: 95vh;
+    scrollbar-width: none;
 }
 
-.top_apps {
+.sidebar_left_content::-webkit-scrollbar {
+    display: none;
+}
+
+.top_apps,
+.recommended_apps {
     padding: 1rem;
 }
 
@@ -98,7 +115,7 @@
 }
 
 .app_card {
-    background: #fff;
+    background: #f8f9fa;
     aspect-ratio: 1;
     box-shadow: 0 2px 8px rgba(0 0 0 / 10%);
     display: flex;
@@ -108,39 +125,54 @@
     cursor: pointer;
 }
 
-.app_card:hover {
-    box-shadow: 0 4px 16px rgba(0 0 0 / 20%);
-}
-
 .app_card img {
     width: 50px;
     aspect-ratio: 1;
 }
 
-.recommended_apps{
+#apps2 .apps_wrapper {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+#apps2 .app_card {
+    background: unset;
+    box-shadow: unset;
+}
+
+.app_card:hover {
+    background-color: #fff !important;
+}
+
+.recommended_apps {
     margin: 2rem 0;
 }
 
 .recommended_apps_wrapper {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-    padding: .5rem 1rem;
 }
 
-.recommended_app{
+.recommended_app {
     display: flex;
     align-items: center;
     gap: .5rem;
+    cursor: pointer;
+    padding: .8rem;
+    border-radius: .5rem;
+    transition: var(--transition);
 }
 
-.recommended_app img{
-    width: 50px;
+.recommended_app:hover {
+    background-color: #fff;
+}
+
+.recommended_app img {
+    width: 40px;
     aspect-ratio: 1;
 }
 
-.recommended_app p{
-    font-size: 12px;
+.recommended_app p {
+    font-size: 11px;
 }
 
 .recommended_app:hover {
@@ -162,5 +194,23 @@
 
     #sidebar_left.active {
         top: 0;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .apps_wrapper {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .recommended_apps_wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .sidebar_left_link span {
+        border: none;
+    }
+
+    .sidebar_left_link.active{
+        font-weight: 700;
     }
 }

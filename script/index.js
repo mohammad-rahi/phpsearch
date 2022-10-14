@@ -64,11 +64,11 @@ const checkWindowWidth = () => {
                 document.querySelector(".search_icon_left").style.display = "block";
                 // document.querySelector(".search_overlay").style.display = "block";
                 document.querySelector(".close_icon").style.display = "block";
-                
-                if(suggestions.scrollHeight){
+
+                if (suggestions.scrollHeight) {
                     suggestions.style.borderTop = "1px solid #efdfdf";
                 }
-                else{
+                else {
                     suggestions.style.borderTop = "none";
                 }
 
@@ -108,3 +108,44 @@ window.addEventListener('resize', () => {
         checkWindowWidth();
     }
 })
+
+const openTabItems = (event, itemName) => {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("item");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("sidebar_left_link");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    if (document.getElementById(itemName)) {
+        document.getElementById(itemName).style.display = "grid";
+        if (itemName === 'apps') {
+            document.getElementById(itemName).querySelector('.apps_title').innerHTML = "Pupular";
+            document.getElementById('apps2').querySelector('.apps_title').innerHTML = "All";
+            document.getElementById('apps2').style.display = "grid";
+        }
+        else {
+            document.getElementById(itemName).querySelector('.apps_title').innerHTML = "All";
+            document.querySelector('.recommended_apps').style.margin = "unset"
+        }
+    }
+    else {
+        document.querySelectorAll('.item').forEach(item => {
+            item.style.display = "grid";
+
+            if (item.classList.contains('top_apps')) {
+                document.getElementById('apps').querySelector('.apps_title').innerHTML = "All";
+                document.getElementById('apps2').style.display = "none";
+            }
+            else {
+                document.getElementById('compute').querySelector('.apps_title').innerHTML = "Recomended";
+            }
+        })
+    }
+    event.currentTarget.className += " active";
+};

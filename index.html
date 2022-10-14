@@ -59,39 +59,115 @@
                         <div class="sidebar_left_tabs">
                             <ul class="sidebar_left_menu">
                                 <li class="sidebar_left_list">
-                                    <a href="#" class="sidebar_left_link active">
+                                    <a href="javascript:void(0)" class="sidebar_left_link active"
+                                        onclick="openTabItems(event, 'all')">
                                         <span>All</span>
                                     </a>
                                 </li>
                                 <li class="sidebar_left_list">
-                                    <a href="#" class="sidebar_left_link">
+                                    <a href="javascript:void(0)" class="sidebar_left_link"
+                                        onclick="openTabItems(event, 'apps')">
                                         <span>Apps</span>
                                     </a>
                                 </li>
                                 <li class="sidebar_left_list">
-                                    <a href="#" class="sidebar_left_link">
+                                    <a href="javascript:void(0)" class="sidebar_left_link"
+                                        onclick="openTabItems(event, 'compute')">
                                         <span>Compute</span>
                                     </a>
                                 </li>
                                 <li class="sidebar_left_list">
-                                    <a href="#" class="sidebar_left_link">
+                                    <a href="javascript:void(0)" class="sidebar_left_link"
+                                        onclick="openTabItems(event, 'compute')">
                                         <span>Storage</span>
                                     </a>
                                 </li>
                                 <li class="sidebar_left_list">
-                                    <a href="#" class="sidebar_left_link">
+                                    <a href="javascript:void(0)" class="sidebar_left_link"
+                                        onclick="openTabItems(event, 'compute')">
                                         <span>Networking</span>
                                     </a>
                                 </li>
                                 <li class="sidebar_left_list">
-                                    <a href="#" class="sidebar_left_link">
+                                    <a href="javascript:void(0)" class="sidebar_left_link"
+                                        onclick="openTabItems(event, 'compute')">
                                         <span>Hosting</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="top_apps">
+                        <div class="top_apps item" id="apps">
+                            <strong class="apps_title">Top Apps</strong>
+                            <div class="apps_wrapper">
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/gmail.png" alt="Gmail" />
+                                        <figcaption>
+                                            <p>Gmail</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/discoed_bubble.png" alt="Discord" />
+                                        <figcaption>
+                                            <p>Discord</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/airbnb.png" alt="Airbnb" />
+                                        <figcaption>
+                                            <p>Airbnb</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/slack.png" alt="Slack" />
+                                        <figcaption>
+                                            <p>Slack</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/reddit.png" alt="Reddit" />
+                                        <figcaption>
+                                            <p>Reddit</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/yahoo.png" alt="Yahoo" />
+                                        <figcaption>
+                                            <p>Yahoo</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/evernote.png" alt="Evernote" />
+                                        <figcaption>
+                                            <p>Evernote</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="app_card">
+                                    <figure>
+                                        <img src="./images/dropbox.png" alt="Dropbox" />
+                                        <figcaption>
+                                            <p>Dropbox</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="top_apps item" id="apps2" style="display: none;">
                             <strong class="apps_title">Top Apps</strong>
                             <div class="apps_wrapper">
                                 <div class="app_card">
@@ -161,7 +237,7 @@
                             </div>
                         </div>
 
-                        <div class="recommended_apps">
+                        <div class="recommended_apps item" id="compute">
                             <strong class="apps_title">Recommended</strong>
                             <div class="recommended_apps_wrapper">
                                 <div class="recommended_app">
