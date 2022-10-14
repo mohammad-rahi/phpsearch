@@ -19,18 +19,20 @@
 
 #sidebar_left {
     width: 550px;
-    min-height: 100vh;
-    background-color: #f2f4f7;
+    background-color: rgb(242, 244, 247, .65);
+    backdrop-filter: blur(12px);
     position: fixed;
-    top: 0;
+    top: 1rem;
     left: -550px;
+    bottom: 1rem;
     z-index: 100;
     box-shadow: 2px 2px 8px rgba(0 0 0 / 12%);
     transition: var(--transition);
+    border-radius: .5rem;
 }
 
 #sidebar_left.active {
-    left: 0;
+    left: 1rem;
 }
 
 .sidebar_left_close_icon {
@@ -55,6 +57,7 @@
 .sidebar_left_content {
     padding: 1rem;
     font-size: 14px;
+    padding-bottom: 3rem;
 }
 
 .sidebar_left_menu {
@@ -115,7 +118,8 @@
 }
 
 .app_card {
-    background: #f8f9fa;
+    background: rgb(248, 249, 250, .65);
+    backdrop-filter: blur(12px);
     aspect-ratio: 1;
     box-shadow: 0 2px 8px rgba(0 0 0 / 10%);
     display: flex;
