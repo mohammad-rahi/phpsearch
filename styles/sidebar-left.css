@@ -38,6 +38,7 @@
     box-shadow: 2px 2px 8px rgba(0 0 0 / 12%);
     transition: var(--transition);
     border-radius: .5rem;
+    overflow: hidden;
 }
 
 #sidebar_left.active {
