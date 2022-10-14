@@ -277,6 +277,13 @@
     z-index: 0 !important;
 }
 
+.icon_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
 .settings_icon {
     display: block !important;
 }
