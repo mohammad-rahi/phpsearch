@@ -149,3 +149,11 @@ const openTabItems = (event, itemName) => {
     }
     event.currentTarget.className += " active";
 };
+
+const popupOpen = () => {
+    document.querySelector('.popup_wrapper').classList.add('active');
+}
+
+const popupClose = () => {
+    document.querySelector('.popup_wrapper').classList.remove('active');
+}

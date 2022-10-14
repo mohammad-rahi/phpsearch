@@ -162,7 +162,7 @@
                             </div>
                         </div>
 
-                        <div class="top_apps item" id="apps2" style="display: none0;">
+                        <div class="top_apps item" id="apps2" style="display: none;">
                             <strong class="apps_title">Top Apps</strong>
                             <div class="apps_wrapper">
                                 <div class="app_card">
@@ -320,6 +320,15 @@
                         <img src="./images/circled-menu.png" alt="Apps" class="circle_menu_icon" />
                     </a>
 
+                    <div class="settings_icon" onclick="popupOpen()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+
+                    </div>
+
                     <div class="settings_icon" onclick="sidebarOpen()">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
@@ -365,6 +374,23 @@
         </nav>
     </header>
 
+    <!--===== Popup =====-->
+    <div class="popup_wrapper">
+        <div class="popup_overlay" onclick="popupClose()"></div>
+        <div id="popup" class="popup">
+
+            <div style="text-align: right;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" width="20px" height="20px" onclick="popupClose()">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+
+            <h2>Welcome to the popup!</h2>
+            <p>Thank you for exploring me.</p>
+        </div>
+    </div>
+
     <!--===== Main Content =====-->
     <div id="container">
         <main>
@@ -374,7 +400,7 @@
                 <div class="search_wrapper">
                     <!-- <h2 class="search_title">phpSearch</h2> -->
                     <figure class="search_logo">
-                        <img src="./images/logo.svg" alt="Deedpde">
+                        <img src="./images/logo.svg" alt="Deepde">
                     </figure>
 
                     <form class="search_form" id="search_form" autocomplete="off">
