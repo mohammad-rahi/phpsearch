@@ -281,6 +281,10 @@
     display: block !important;
 }
 
+.settings_icon:hover{
+    background: #f8f9fa;
+}
+
 .navbar_link{
     display: flex;
     justify-content: center;
