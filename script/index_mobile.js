@@ -12,7 +12,7 @@ const autoCompleteMobile = (event) => {
         })
 
         let list = res.map(country => {
-            return `<li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class='list_search_icon'><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10 607z" /></svg> ${country}</li>`
+            return `<li data-suggestionMobile="${country.toLowerCase()}" onclick="clickableListMobile(this)"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class='list_search_icon'><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10 607z" /></svg> ${country}</li>`
         }).join("");
 
         suggestionsMobile.innerHTML = list;
@@ -73,3 +73,11 @@ searchOverlay.addEventListener("click", () => {
 searchMobile.addEventListener("input", autoCompleteMobile);
 
 searchMobile.addEventListener("focus", suggestionsBLockMobile);
+
+
+// Make suggesins list clickable
+const clickableListMobile = (thisList) => {
+    searchMobile.value = thisList.dataset.suggestionmobile;
+
+    suggestionsMobile.innerHTML = `<li data-suggestionMobile="${thisList.dataset.suggestionmobile}" onclick="clickableList(this)"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class='list_search_icon'><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10 607z" /></svg> ${thisList.dataset.suggestionmobile}</li>`;
+};

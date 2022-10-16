@@ -55,7 +55,7 @@ const checkWindowWidth = () => {
                 })
 
                 let list = res.map(country => {
-                    return `<li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class='list_search_icon'><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10 607z" /></svg> ${country}</li>`
+                    return `<li data-suggestion="${country.toLowerCase()}" onclick="clickableList(this)"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class='list_search_icon'><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10 607z" /></svg> ${country}</li>`
                 }).join("");
 
                 suggestions.innerHTML = list;
@@ -102,6 +102,13 @@ const checkWindowWidth = () => {
 
 search.addEventListener("focus", checkWindowWidth);
 search.addEventListener("input", checkWindowWidth);
+
+// Make suggesins list clickable
+const clickableList = (thisList) => {
+    search.value = thisList.dataset.suggestion;
+    
+    suggestions.innerHTML = `<li data-suggestion="${thisList.dataset.suggestion}" onclick="clickableList(this)"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class='list_search_icon'><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10 607z" /></svg> ${thisList.dataset.suggestion}</li>`;
+};
 
 window.addEventListener('resize', () => {
     if (search.value) {
